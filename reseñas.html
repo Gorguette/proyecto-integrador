@@ -8,14 +8,15 @@
     <script src="https://kit.fontawesome.com/c855f027e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-    <nav>
-        <ul class="nav">
-       <li><a href="index.html">inicio</a></li>
-       <li><a href="contacto.html">Contactos</a></li>
-        </ul>
-    </nav>
-</header>
+    <div id="header-container"></div>
+    <script>
+        fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-container").innerHTML = data;
+            inicializarMenu();
+        });
+        </script>
 <main>
     <section id="reseñas">
         <h2>Reseñas de Nuestros Clientes</h2>
@@ -57,7 +58,22 @@
  </section>
 </main>
 <footer>
-    <p>&copy; 2024 Skincare Naturral</p>
+    <p>Siguenos en redes sociales</p>
+    <div class="redes">
+    <a href="https://www.facebook.com" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.tiktok.com" target="_blank">
+    <i class="fa-brands fa-tiktok"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+    </a>
+ </div>
+    <p>&copy; 2024 Skincare Natural</p>
 </footer>
+<script src="js/script.js" defer></script>
+<script src="js/producto.js"></script>
+</body>
 </body>
 </html>

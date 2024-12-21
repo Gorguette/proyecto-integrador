@@ -5,44 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactos</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c855f027e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="nav">
-           <li><a href="index.html">inicio</a></li>
-            </ul>
-        </nav>
-</header>
+    <div id="header-container"></div>
+    <script>
+        fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-container").innerHTML = data;
+            inicializarMenu();
+        });
+        </script>
 <main id="contacto">
 <fieldset>
-    <h3>CONTACTO</h3>
-<form action="" method="post">
-    <div>
-            <label for="nombre">Nombre:</label><input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required> 
+    <h3>CONTACTANOS</h3>
+<form id="contacto-form" action="https://formspree.io/f/mjkvqnrb" method="post">
+    <div class="form-group">
+            <label for="nombre">Nombre Completo:</label><input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+            <small id="error-nombre" class="error-msg"></small> 
     </div>
-    <div>
-            <label for="email">Correo:</label><input type="email" name="email" id="email" placeholder="juan@gmail.com" required>
+    <div class="form-group">
+            <label for="email">Correo Electronico:</label><input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required>
+            <small id="error-email" class="error-msg"></small>
     </div>
-    <div>
-         <label for="number">Telefono:</label><input type="number" name="numero" id="" required>
+    <div class="form-group">
+         <label for="numero">Telefono:</label><input type="number" name="numero" id="numero" required>
+         <small id="error-numero" class="error-msg"></small>
     </div>
-    <div>
+    <div class="form-group">
         <h5>Aqui puedes dejarnos cualquier consulta te contestaremos por mail </h5>
-        <label for="consulta">Consulta:</label>
-        <textarea name="consulta" rows="10" cols="40">Escribe tu consulta</textarea>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="20" placeholder="Escribe tu mensaje aqui"></textarea>
+        <small id="error-mensaje" class="error-msg"></small>
     </div>
     <DIV>
-        <input type="checkbox" name="" id="" required> <label for="">HE LEIDO Y ESTOY DE ACUERDO CON LOS TERMINOS Y CONDICIONES DE LA WEB</label>
-   </DIV>
+        <input type="checkbox" name="acepto" id="acepto" required> <label for="acepto">HE LEIDO Y ESTOY DE ACUERDO CON LOS TERMINOS Y CONDICIONES DE LA WEB</label>
+        <small id="error-acepto" class="error-msg"></small>
+    </DIV>
     </div>
      <button type="submit">Enviar</button>
+     <p id="form-msg" class="success-msg"></p>
     </div>
 </form>
 </fieldset>
+<div>
+    <h4>Agenda tu turno para visitarnos</h4>
+        <label for="turno">Turnos:</label>
+        <select name="turno" id="turno">
+            <option>Mañana</option>
+            <option>Tarde</option>
+            <option>Noche</option>
+        </select>
+    </div>
+    <div>
+        <h5>Pasa A Nuestra Direccion</h5>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1698232.2863805816!2d-60.84401587820553!3d-33.76428513276041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-32.9388767!2d-60.6633984!4m5!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sobelisco%20direccion!3m2!1d-34.603738899999996!2d-58.381570399999994!5e0!3m2!1ses-419!2sar!4v1734556555203!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 </main>
 <footer>
-    <p>&copy; 2024 Skincare Naturral</p>
+    <p>Siguenos en redes sociales</p>
+        <div class="redes">
+        <a href="https://www.facebook.com" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+     </div>
+    <p>&copy; 2024 Skincare Natural</p>
 </footer>
+<script src="js/script.js" defer></script>
+<script src="js/contacto.js"></script>
+<script src="js/producto.js"></script>
+</body>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c855f027e8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-container").innerHTML = data;
+            inicializarMenu();
+        });
+        </script>
+<main>
+    <section id="filter">
+        <h2>Filtrar por categoria</h2>
+        <select>
+            <option value="all">Todos</option>
+            <option value="limpieza">Limpieza</option>
+            <option value="serum">Serum</option>
+            <option value="hidratation">Hidratation</option>
+            <option value="anti-edad">Anti-edad</option>
+            <option value="proteccion">Proteccion</option>
+        </select>
+    </section>
+    <h1>Nuestros Productos</h1>
+    <div id="productos-container" class="productos-container"></div>
+        <section>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kqJFnMwNzp4?si=0fMJdPuVn0rOKpIL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+</main>
+<footer>
+    <p>Siguenos en redes sociales</p>
+        <div class="redes">
+        <a href="https://www.facebook.com" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+     </div>
+   <p>@2024Skincare Todos los derechos reservados</p>
+     </footer>
+       <script src="js/script.js" defer></script>
+       <script src="js/producto.js"></script>
+</body>
+</html>

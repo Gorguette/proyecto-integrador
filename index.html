@@ -8,45 +8,45 @@
     <script src="https://kit.fontawesome.com/c855f027e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>BIENVENIDOS A NUESTRA TIENDA</h1>
-        </div>
-            <nav>
-                <ul class="nav">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="producto.html">Productos</a></li>
-                    <li><a href="reseñas.html">Reseñas</a></li>
-                    <li><a href="contacto.html">Contactos</a></li>
-                </ul>
-            </nav>
-    </header>
+    <div id="header-container"></div>
+    <script>
+        fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-container").innerHTML = data;
+           inicializarMenu();
+        });
+
+        </script>
     <main>
-        <section>
-<h2>Acerca De Nosotros</h2>
-<p>En nuestra tienda,nos apasiona el cuidado de la piel y estamos comprometidos a ofrecerte lo mejor para tu rutina diaria.
-    Nuestra seleccion de productos de <strong>skincare</strong> esta diseñada para resaltar tu belleza natural mientras cuidas y proteges tu piel.
-</p>
-       </section>
-       <section>
-        <DIV class="img">
-            <img src="imagenes/istockphoto-1533529011-1024x1024.jpg">
-        </DIV>
-       </section>
-<div>
-<h4>Agenda tu turno para visitarnos</h4>
-    <label for="turno">Turnos:</label>
-    <select name="turno" id="turno">
-        <option>Mañana</option>
-        <option>Tarde</option>
-        <option>Noche</option>
-    </select>
-</div>
+        <h1>Nuestros Productos</h1>
+        <div id="productos-container" class="productos-container"></div>
+        <span id="contador-carrito">0</span>
+    <section>
+        <h2>Acerca De Nosotros</h2>
+        <p>En nuestra tienda,nos apasiona el cuidado de la piel y estamos comprometidos a ofrecerte lo mejor para tu rutina diaria.
+            Nuestra seleccion de productos de <strong>skincare</strong> esta diseñada para resaltar tu belleza natural mientras cuidas y proteges tu piel.
+                <a href="productos.html">Ver productos</a>
+            
+        </p>
+    </section>
     </main>
     <footer>
         <p>Siguenos en redes sociales</p>
+        <div class="redes">
+        <a href="https://www.facebook.com" target="_blank">
         <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
         <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
         <i class="fa-brands fa-instagram"></i>
+        </a>
+     </div>
+    <p>@2024Skincare Todos los derechos reservados</p>
     </footer>
+    <script src="js/script.js" defer></script>
+    <script src="js/producto.js"></script>
 </body>
 </html>

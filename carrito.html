@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       <h1>Carrito de Compras</h1>
+    </header>
+    <main>
+        <section id="carrito-container"></section>
+        <h2 id="total">Total: $0</h2>
+        <form id="formulario-compra">
+            <h3>Datos de envio</h3>
+            <label for="direccion">Direccion:</label>
+            <input type="text" id="direccion" placeholder="Ingresa tu direccion" required>
+            <button type="submit">Finalizar compra</button>
+        </form>
+        <div id="mensaje-confirmacion" style="display: none; margin-top: 20px;">
+            <h3>Compra realizada con Exito!</h3>
+            <p>Tu pedido sera enviado a la direccion: <span id="direccion-confirmada"></span></p>
+        </div>
+        <div class="nav">
+            <li><a href="productos.html" class="seguir">Segui Comprando</a></li>
+        </div>
+    </main>
+    <footer>
+        <p>Siguenos en redes sociales</p>
+        <div class="redes">
+        <a href="https://www.facebook.com" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+     </div>
+        <p>&copy; 2024 Skincare Natural</p>
+    </footer>
+    <script src="js/script.js" defer></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>
