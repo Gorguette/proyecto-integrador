@@ -381,8 +381,3 @@ button[type="submit"] {
     width: 80%;
 }
 }
-@media (min-width: 768px) {
-    .productos-container {
-        margin: 1rem;
-    }
-}
