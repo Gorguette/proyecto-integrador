@@ -364,4 +364,22 @@ button[type="submit"] {
 .menu-desplegable.activo {
     display: flex;
 }
+.carrito-icon {
+    position: relative;
+}
+.carrito-icon i {
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+#contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #d67684;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+}
 }

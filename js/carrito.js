@@ -50,7 +50,7 @@ function eliminarProducto(index) {
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 carrito.splice(index, 1);
 localStorage.setItem("carrito", JSON.stringify(carrito));
-mostrarCarrito();
+mostrarCarrito()
 actualizarContadorCarrito;
 }
 //manejar el formulario de compra
@@ -60,11 +60,13 @@ document.getElementById("formulario-compra").addEventListener("submit", (e) => {
     const mensajeConfirmacion = document.getElementById("mensaje-confirmacion");
     const direccionConfirmada = document.getElementById("direccion-confirmada");
     //mostrar mensaje de confirmacion
-    direccionConfirmada.textContent = direccionInput;
+    direccionConfirmada.textContent = `${direccionInput}`;
     mensajeConfirmacion.style.display = "block";
     //vaciar el carrito
-    carrito =[];
-    actualizarCarrito();
+    localStorage.removeItem("carrito");
+    carrito = [];
+    actualizarContadorCarrito();
+    mostrarCarrito();
 });
 //ìnicializacion del carrito
 document.addEventListener("DOMContentLoaded", () => {
