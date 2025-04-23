@@ -18,10 +18,19 @@
       "stock": 15
     },
     {
+      "id": 2,
+      "nombre": "Jabon liquido",
+      "descripcion": "Jabon liquido suave que elimina impurezas y el exceso de grasa sin resecar la piel",
+      "imagen": "imagenes/curology-7TlWZkpxCb0-unsplash.jpg",
+      "categoria": "limpieza",
+      "precio": 12.99,
+      "stock": 15
+    },
+    {
       "id": 3,
       "nombre": "Crema hidratante",
       "descripcion": "Crema hidratante de textura ligera que proporciona una hidratacion profundaa durante todo el dia",
-      "imagen": "imagenes/istockphoto-1463188212-1024x1024.jpg",
+      "imagen": "imagenes/istockphoto-1421806505-1024x1024.jpg",
       "categoria": "hidratation",
       "precio": 30.99,
       "stock": 80
@@ -63,10 +72,19 @@
         "stock": 15
       },
       {
+        "id": 2,
+        "nombre": "Barra de Jabon",
+        "descripcion": "Jabon suave que elimina impurezas y el exceso de grasa sin resecar la piel",
+        "imagen": "imagenes/istockphoto-1937359171-1024x1024.jpg",
+        "categoria": "limpieza",
+        "precio": 12.99,
+        "stock": 15
+      },
+      {
         "id": 3,
         "nombre": "Crema hidratante",
         "descripcion": "Crema hidratante de textura ligera que proporciona una hidratacion profundaa durante todo el dia",
-        "imagen": "imagenes/istockphoto-1463188212-1024x1024.jpg",
+        "imagen": "imagenes/istockphoto-1421806505-1024x1024.jpg",
         "categoria": "hidratation",
         "precio": 30.99,
         "stock": 80
